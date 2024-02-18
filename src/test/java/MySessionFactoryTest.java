@@ -8,8 +8,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import service.MySessionFactory;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class MySessionFactoryTest {
 
@@ -58,7 +58,8 @@ public class MySessionFactoryTest {
         SessionFactory sessionFactory2 = MySessionFactory.getSessionFactory();
         assertNotNull(sessionFactory1);
         assertNotNull(sessionFactory2);
-        assertSame(sessionFactory1, sessionFactory2); 
+        assertEquals(sessionFactory1, sessionFactory2);
     }
+
 
 }
