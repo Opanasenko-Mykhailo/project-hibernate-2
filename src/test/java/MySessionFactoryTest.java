@@ -9,6 +9,7 @@ import org.junit.Test;
 import service.MySessionFactory;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class MySessionFactoryTest {
 
@@ -51,13 +52,13 @@ public class MySessionFactoryTest {
         assertNotNull(sessionFactory);
     }
 
-//    @Test
-//    public void testGetSessionFactorySingleton() {
-//        SessionFactory sessionFactory1 = MySessionFactory.getSessionFactory();
-//        SessionFactory sessionFactory2 = MySessionFactory.getSessionFactory();
-//        assertNotNull(sessionFactory1);
-    //test
-//        assertNotNull(sessionFactory2);
-//        assert (sessionFactory1 == sessionFactory2);
-//    }
+    @Test
+    public void testGetSessionFactorySingleton() {
+        SessionFactory sessionFactory1 = MySessionFactory.getSessionFactory();
+        SessionFactory sessionFactory2 = MySessionFactory.getSessionFactory();
+        assertNotNull(sessionFactory1);
+        assertNotNull(sessionFactory2);
+        assertSame(sessionFactory1, sessionFactory2); 
+    }
+
 }
