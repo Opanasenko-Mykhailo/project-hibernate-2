@@ -66,7 +66,7 @@ public class ServiceManager {
             film.setRating(Rating.PG13);
             film.setSpecialFeatures(Set.of(Feature.TRAILERS, Feature.BEHIND_THE_SCENES));
             film.setLength((short) 22);
-            film.setReplacementCost(BigDecimal.TWO);
+            film.setReplacementCost(BigDecimal.valueOf(2));
             film.setRentalRate(BigDecimal.ZERO);
             film.setLanguage(language);
             film.setDescription("new scary film");
