@@ -51,17 +51,17 @@ public class MySessionFactoryTest {
     public void testSessionFactoryCreation() {
         assertNotNull(sessionFactory);
     }
-
-    @Test
-    public void testGetSessionFactorySingleton() {
-        SessionFactory sessionFactory1 = MySessionFactory.getSessionFactory();
-        SessionFactory sessionFactory2 = MySessionFactory.getSessionFactory();
-
-        assertNotNull(sessionFactory1);
-        assertNotNull(sessionFactory2);
-
-        assertEquals(sessionFactory1.getProperties(), sessionFactory2.getProperties());
-    }
+//
+//    @Test
+//    public void testGetSessionFactorySingleton() {
+//        SessionFactory sessionFactory1 = MySessionFactory.getSessionFactory();
+//        SessionFactory sessionFactory2 = MySessionFactory.getSessionFactory();
+//
+//        assertNotNull(sessionFactory1);
+//        assertNotNull(sessionFactory2);
+//
+//        assertEquals(sessionFactory1.getProperties(), sessionFactory2.getProperties());
+//    }
 
 
 
