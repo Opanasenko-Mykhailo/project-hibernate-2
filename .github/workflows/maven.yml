@@ -14,10 +14,10 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Set up JDK 21
+      - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: 21
+          java-version: '11' # Змініть на потрібну версію Java
 
       - name: Cache Maven packages
         uses: actions/cache@v2
@@ -26,5 +26,5 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: Run Maven tests
+      - name: Build and test with Maven
         run: mvn --batch-mode --update-snapshots test
