@@ -56,6 +56,7 @@ public class MySessionFactoryTest {
 //        SessionFactory sessionFactory1 = MySessionFactory.getSessionFactory();
 //        SessionFactory sessionFactory2 = MySessionFactory.getSessionFactory();
 //        assertNotNull(sessionFactory1);
+
 //        assertNotNull(sessionFactory2);
 //        assert (sessionFactory1 == sessionFactory2);
 //    }
